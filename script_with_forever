@@ -1,0 +1,34 @@
+#!/bin/bash
+export path_to_ghost_install="/path/to/ghost/install/"
+## go to your home
+cd ~
+## Get the latest version:
+curl -LOk https://ghost.org/zip/ghost-latest.zip
+## Unzip to a temporary location:
+unzip ghost-latest.zip -d ghost_temp
+## make a backup of ghost install
+cd $path_to_ghost_install
+forever stop index.js
+cd ~
+cp -R $path_to_ghost_install ghost_temp/backup
+## Change directory into your current ghost install:
+cd $path_to_ghost_install
+## Remove the core directory:
+rm -rf  core
+## Change back to your download of Ghost latest:
+cd ~/ghost_temp
+## Copy the new core directory to your Ghost install:
+cp -R core $path_to_ghost_install
+## Copy the other key files to your Ghost install directory:
+cp index.js *.json *.md $path_to_ghost_install
+cd content/themes/
+cp -r casper $path_to_ghost_install/content/themes
+## Change back to your ghost install directory:
+cd $path_to_ghost_install
+## Update permissions:
+chown -R ghost_user:ghost_group *
+## Upgrade dependencies:
+npm install --production
+## Restart Ghost using script with forever
+/usr/local/bin/your-site-name.sh
+## if you see that everything is working properly you can remove ghost_temp folder
