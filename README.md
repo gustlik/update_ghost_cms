@@ -7,3 +7,4 @@ https://github.com/TryGhost/Ghost-Config/blob/master/init.d/ghost
 
 For Ghost CMS forever script I use:
 
+https://github.com/gustlik/update_ghost_cms/blob/master/forever_script
