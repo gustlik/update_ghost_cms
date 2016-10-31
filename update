@@ -4,7 +4,7 @@ export blog_name="supervisorctl_blog_name"
 cd ~
 curl -LOk https://ghost.org/zip/ghost-latest.zip
 unzip ghost-latest.zip -d ghost_temp
-supervisorctl stop blog_name
+supervisorctl stop $blog_name
 cd ~
 cp -R $path_to_ghost_install ghost_temp/backup
 cd $path_to_ghost_install
@@ -18,5 +18,5 @@ cd $path_to_ghost_install
 chown -R somebody:somebody *
 rm -rf node_modules/
 npm install --production
-supervisorctl start blog_name
+supervisorctl start $blog_name
 ## if you see that everything is working properly you can remove ghost_temp folder
