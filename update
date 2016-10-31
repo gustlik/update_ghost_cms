@@ -15,7 +15,7 @@ cp index.js *.json $path_to_ghost_install
 cd content/themes/
 cp -r casper $path_to_ghost_install/content/themes
 cd $path_to_ghost_install
-chown -R jakub_ghost:jakub_ghost *
+chown -R somebody:somebody *
 rm -rf node_modules/
 npm install --production
 supervisorctl start blog_name
