@@ -6,7 +6,9 @@ That script uses supervisorctl to manage blog. From me experience it is the best
 
 
 Additional info for older versions of script:
+
 For Ghost CMS service I use:
 https://github.com/TryGhost/Ghost-Config/blob/master/init.d/ghost
+
 For Ghost CMS forever script I use:
 https://github.com/gustlik/update_ghost_cms/blob/master/forever_script_example
