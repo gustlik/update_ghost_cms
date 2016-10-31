@@ -5,7 +5,8 @@ My actual version is in file called "update". https://github.com/gustlik/update_
 That script uses supervisorctl to manage blog. From me experience it is the best method. Earlier versions (with forever and init service) were more problematic, especially if You have more than one blog on same host.
 
 
-Additional info for older versions of script:
+
+## Additional info for older versions of script:
 
 For Ghost CMS service I use:
 https://github.com/TryGhost/Ghost-Config/blob/master/init.d/ghost
