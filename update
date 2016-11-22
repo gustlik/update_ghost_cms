@@ -2,6 +2,7 @@
 export path_to_ghost_install="/your/path/here/"
 export blog_name="supervisorctl_blog_name"
 cd ~
+rm -rf ghost_temp
 curl -LOk https://ghost.org/zip/ghost-latest.zip
 unzip ghost-latest.zip -d ghost_temp
 supervisorctl stop $blog_name
