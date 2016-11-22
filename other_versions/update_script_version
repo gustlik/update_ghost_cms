@@ -3,6 +3,7 @@ export path_to_ghost_install="/path/to/ghost/install/"
 export ghost_service="ghost_service_name"
 ## go to your home
 cd ~
+rm -rf ghost_temp
 ## Get the latest version:
 curl -LOk https://ghost.org/zip/ghost-latest.zip
 ## Unzip to a temporary location:
